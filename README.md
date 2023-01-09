@@ -1,1 +1,1 @@
-## Course Material for Terminal
+## Course Material for Terminal workshop
