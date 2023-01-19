@@ -34,6 +34,7 @@ local function resetGame()
   ship.x = canvas:getWidth() / 2
   ship.y = 170
   gameover = false
+  paused = false
   enemySpawTimer = 0
   enemySpawDelay = 0.5
   enemySpeedFactor = 1
@@ -77,7 +78,7 @@ function love.load()
 end
 
 function love.update(dt)
-  if gameover then
+  if gameover or paused then
     return
   end
 
@@ -236,5 +237,9 @@ function love.keypressed(key)
 
   if key == 'f1' then
     debug = not debug
+  end
+
+  if key == 'p' then
+    paused = not paused
   end
 end
