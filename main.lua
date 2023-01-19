@@ -49,9 +49,9 @@ local function fire(x, y)
   })
 end
 
-local function doTheyCollide(a, b)
-  local hyp = math.sqrt((a.x - b.x)^2 + (a.y - b.y)^2)
-  return hyp < (a.r + b.r)
+local function doTheyCollide(entityA, entityB)
+  local hyp = math.sqrt((entityA.x - entityB.x)^2 + (entityA.y - entityB.y)^2)
+  return hyp < (entityA.r + entityB.r)
 end
 
 local function spawnEnemy(canvas)
